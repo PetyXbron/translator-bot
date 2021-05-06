@@ -1,0 +1,29 @@
+{
+  "name": "translator-discord-bot",
+  "version": "0.5.0",
+  "description": "Discord Google translator bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetyXbron/translator-discord-bot.git"
+  },
+  "keywords": [
+    "translator",
+    "discord",
+    "google"
+  ],
+  "author": "PetyXbron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PetyXbron/translator-discord-bot/issues"
+  },
+  "homepage": "https://github.com/PetyXbron/translator-discord-bot#readme",
+  "dependencies": {
+    "@iamtraction/google-translate": "^1.1.2",
+    "discord.js": "^12.5.3",
+    "fs": "^0.0.1-security"
+  }
+}
