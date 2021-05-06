@@ -7,6 +7,7 @@ const bot = new Discord.Client({
 });
 
 const config = require('./config');
+const activites = ['PLAYING', 'WATCHING', 'COMPETING', 'LISTENING']
 bot.token = config.bot.token
 bot.prefix = config.bot.prefix;
 bot.status = config.bot.status;
@@ -25,6 +26,9 @@ if(bot.token === '') {
 } else if (bot.activity === '' && bot.status !== false) {
     console.log('⚪ ' + 'Bot activity type in config was empty! Activity type is now "playing"')
     bot.activity = 'PLAYING'
+} else if (!new Set(activites).has(bot.activity)) {
+    console.log('⚪ ' + `"${bot.activity}" activity is not supported. Bot status was disabled.`)
+    bot.status = false;
 }
 
 //Event handler
