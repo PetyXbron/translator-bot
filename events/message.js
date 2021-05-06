@@ -2,16 +2,17 @@ const Discord = require("discord.js")
 const translator = require('@iamtraction/google-translate');
 
 module.exports = async (bot, message) => {
-    const /*Help command aliases*/cmdHELP = [`${prefix}help`, `${prefix}commands`, `${prefix}cmd`, `${prefix}cmds`];
+    const px = bot.prefix
+    const /*Help command aliases*/cmdHELP = [`${px}help`, `${px}commands`, `${px}cmd`, `${px}cmds`];
 
     if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
+    if (!message.content.startsWith(bot.prefix)) return;
 
     const msgArray = message.content.split(" ");
     const cmd = msgArray[0].toLowerCase();
     const args = msgArray.slice(1);
 
-    if (message.mentions.has(bot.user) && !message.mentions.has(message.guild.id) | new Set(cmdHELP).has(cmd)) {
+    if (new Set(cmdHELP).has(cmd)) {
         const embedHelp = new Discord.MessageEmbed()
           .setColor('#0377fc')
           .setAuthor(bot.user.username, bot.user.displayAvatarURL())

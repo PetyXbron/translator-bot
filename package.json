@@ -1,6 +1,6 @@
 {
   "name": "translator-discord-bot",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "Discord Google translator bot",
   "main": "index.js",
   "scripts": {
