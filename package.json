@@ -1,6 +1,6 @@
 {
   "name": "translator-discord-bot",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "Discord Google translator bot",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/PetyXbron/translator-discord-bot#readme",
   "dependencies": {
     "@iamtraction/google-translate": "^1.1.2",
+    "chalk": "^4.1.1",
     "discord.js": "^12.5.3",
     "fs": "^0.0.1-security"
   }
